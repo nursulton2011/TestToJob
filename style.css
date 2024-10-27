@@ -1,0 +1,706 @@
+section{
+    display: flex;
+    background-color: #E5E5EA;
+}
+.toggle-content {
+    display: none; /* Скрываем контент по умолчанию */
+    margin: 5px 0;
+}
+.toggle-button {
+    cursor: pointer;
+}
+.arrow {
+    cursor: pointer;
+    font-size: 18px; /* Размер стрелок */
+    padding: 0 5px; /* Отступы вокруг стрелок */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+.Nazad{
+    display: flex;
+}
+.SEO{
+    background-color:#FFF;
+    width: 277px;
+    height: 700px;
+    border: 1px solid #E5E5EA;
+}
+.SEO h2{
+    font-family: 'PT Root UI';
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    width: 56px;
+    height: 22px;
+    margin-left: 20px;
+}
+.Nazad button{
+    margin-left: 157px;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    margin-top: 35px;
+}
+.analitika{
+    margin-top: 32px;
+    margin-left: -25px;
+    width: 237px;
+    height: 36px;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+}
+.analitika span{
+    font-family: 'PT Root UI';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    width: 125px;
+    height: 17px;
+    color: #747474;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+}
+.toggle-content p:first-child{
+    margin-left: 64px;
+    font-family: 'PT Root UI';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    margin-top: 15px;
+}
+.toggle-content p:last-child{
+    margin-left: 64px;
+    font-family: 'PT Root UI';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color:#747474;
+    margin-top: 9.5px;
+}
+.toggle-button{
+    font-family: 'PT Root UI';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+}
+#GaykaImg{
+    margin-left: 20px;
+}
+.Syom_Position{
+    margin-left: 20px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 17.5px;
+    border-bottom: 1px solid #E5E5EA; /* Толщина и цвет линии */
+    padding-bottom: 8px; /* Отступ между контентом и линией */
+
+}
+.Syom_Position span{
+    font-family: 'PT Root UI';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: #747474;
+}
+.project{
+    margin-left: 20px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+.project span{
+    font-family: 'PT Root UI';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: #747474;
+}
+.verhniy_menu{
+    display: flex;
+    width: 1163px;
+    height: 72px;
+    border: 1px solid #E5E5EA;
+    background-color: white;
+}
+.stroka_menyu{
+    display: flex;
+    background-color: white;
+    display: flex; /* Включаем flexbox */
+    align-items: center; /* Центрируем элементы по вертикали */
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.stroka_menyu button{
+    border: none;
+    cursor: pointer;
+}
+.Project_btn span{
+    font-family: 'PT Root UI';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.Project_btn{
+    background-color: transparent;
+}
+.project{
+    margin-top: 29px;
+    margin-left: 20px;
+}
+.project-container {
+    display: none; /* Изначально скрыт */
+    margin-top: 10px; /* Отступ сверху, чтобы отступить от кнопки */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, max-height 0.3s ease; /* Плавный переход */
+    overflow: hidden;
+    max-height: 0; /* Начальная высота - 0 */
+    opacity: 0;
+}
+
+.project-container.show {
+    display: block; /* Показываем блок */
+    max-height: 300px; /* Максимальная высота */
+    opacity: 1;
+}
+
+.project-container div {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.updated{
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+.updated span{
+    font-family: 'PT Root UI';
+    font-size: 12px;
+    line-height: 14.4px;
+}
+.updated button{
+    background-color: transparent;
+}
+.create_project{
+    background-color: #F2F8FE;
+    width: 155px;
+    height: 32px;
+    margin-left: 24px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.create_project span{
+    color:  #0076F5;
+    margin-left: 8px;
+    font-family: 'PT Root UI';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    margin-top: 7.5px;
+}
+.create_project img{
+    margin-left: 16px;
+    margin-top: 4px;
+}
+.popup {
+    display: none; /* Изначально скрыт */
+    position: fixed; /* Зафиксированное положение */
+    z-index: 1000; /* Поверх других элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ширина 100% */
+    height: 100%; /* Высота 100% */
+    overflow: auto; /* Прокрутка, если нужно */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
+
+.popup_content {
+    background-color: #fefefe; /* Фон попапа */
+    margin: 15% auto; /* Отступ сверху и выравнивание по центру */
+    padding: 20px; /* Внутренний отступ */
+    border: 1px solid #888; /* Граница */
+    width: 80%; /* Ширина попапа */
+    max-width: 500px; /* Максимальная ширина */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+.close {
+    color: #aaa; /* Цвет крестика */
+    float: right; /* Вправо */
+    font-size: 28px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Цвет крестика при наведении */
+    text-decoration: none; /* Убираем подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+}
+.switch {
+    position: relative; /* Позиционирование относительно родительского элемента */
+    display: inline-block; /* Отображение в одной строке */
+    width: 40px; /* Ширина ползунка */
+    height: 20px; /* Высота ползунка */
+    margin-right: 10px; /* Отступ справа от ползунка */
+    margin-left: 8px;
+}
+
+.switch input {
+    opacity: 0; /* Скрываем стандартный чекбокс */
+    width: 0; /* Ширина чекбокса */
+    height: 0; /* Высота чекбокса */
+}
+
+.slider {
+    position: absolute; /* Абсолютное позиционирование */
+    cursor: pointer; /* Курсор в виде указателя */
+    top: 0; /* Отступ сверху */
+    left: 0; /* Отступ слева */
+    right: 0; /* Отступ справа */
+    bottom: 0; /* Отступ снизу */
+    background-color: gray; /* Цвет выключенного состояния (серый) */
+    transition: .4s; /* Плавный переход при изменении состояния */
+    border-radius: 20px; /* Закругленные углы */
+}
+
+.slider:before {
+    position: absolute; /* Абсолютное позиционирование */
+    content: ""; /* Пустой контент для создания бегунка */
+    height: 16px; /* Высота бегунка (уменьшена для пропорциональности) */
+    width: 16px; /* Ширина бегунка (уменьшена для пропорциональности) */
+    left: 2px; /* Отступ от левого края */
+    bottom: 2px; /* Отступ от нижнего края */
+    background-color: white; /* Цвет бегунка (белый) */
+    border-radius: 50%; /* Закругленный бегунок */
+    transition: .4s; /* Плавный переход при перемещении бегунка */
+}
+
+/* Стиль для включенного состояния */
+input:checked + .slider {
+    background-color: blue; /* Цвет включенного состояния (синий) */
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px); /* Перемещение бегунка вправо при включении */
+}
+
+/* Стиль для текста рядом с ползунком */
+.toggle-label {
+    font-size: 16px; /* Размер шрифта для текста */
+    vertical-align: middle; /* Вертикальное выравнивание текста */
+}
+.input-container {
+    display: flex; /* Отображение элементов в строку */
+    flex-direction: column; /* Выравнивание по вертикали */
+    gap: 10px; /* Отступ между элементами */
+}
+
+.input-item {
+    display: flex; /* Устанавливаем флекс-контейнер для поля ввода и текста */
+    flex-direction: column; /* Размещение текста над полем ввода */
+}
+
+.input-label {
+    margin-bottom: 5px; /* Отступ между текстом и полем ввода */
+    font-size: 16px; /* Размер шрифта для текста */
+}
+
+.input-field {
+    width: 100%; /* Ширина поля ввода */
+    padding: 8px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Цвет границы */
+    border-radius: 4px; /* Закругленные углы */
+    font-size: 14px; /* Размер шрифта для текста в поле ввода */
+    transition: border-color 0.3s; /* Плавный переход цвета границы */
+}
+
+.input-field:focus {
+    border-color: blue; /* Цвет границы при фокусе */
+    outline: none; /* Убираем стандартный контур */
+}
+.input-field {
+    font-family: 'PT Root UI';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    
+}
+
+.input-item {
+    margin-bottom: 15px; /* Отступ между инпутами */
+}
+.input-icon{
+    width: 20px;
+    height: 20px;
+}
+.popup_content h2{
+    font-family: 'PT Root UI';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    color: #404040; 
+}
+.connect{
+    font-family: 'PT Root UI';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    color: #404040; 
+    margin-top: 16px;
+}
+.Ubedites{
+    display: flex;
+    width: Fill (352px)px;
+    height: Hug (58px)px;
+    gap: 8px;
+    background-color: #F2F8FE;
+    margin-top: 8px;
+    border-radius: 8px;
+}
+.Ubedites button{
+    border: none;
+    background-color: transparent;
+}
+.Ubedites p{
+    font-family: 'PT Root UI';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    color: #404040;
+}
+.toggle-label{
+    font-family: 'PT Root UI';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+    color: #404040;    
+}
+.switch-container{
+    margin-top: 18px;
+}
+#clientIdInput{
+    margin-top: 16px;
+}
+#clientIdInput span{
+    font-family: 'PT Root UI';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    color: #404040;
+}
+#accessTokenInput{
+    margin-top: 16px;
+}
+#accessTokenInput span{
+    font-family: 'PT Root UI';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    color: #404040;
+}
+.input-container span{
+    font-family: 'PT Root UI';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    color: #404040;
+}
+.conectionBtn{
+    margin-left: 85px;
+    margin-top: 24px;
+}
+.conectionBtn button:first-child{
+    width: 111px;
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    background-color:#0076F5;
+    font-family: 'PT Root UI';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    color: #FFF;
+    cursor: pointer;
+}
+.conectionBtn button:last-child{
+    width: 95px;
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    background-color:#FFF;
+    font-family: 'PT Root UI';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    margin-left: 24px;
+    color: #0076F5;
+    cursor: pointer;
+}
+
+
+
+/* Стили для контейнера с загрузкой */
+.loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Стили для каждой черточки */
+.loading-animation .bar {
+    width: 5px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 2px;
+    animation: spin 1s linear infinite;
+}
+
+/* Задержка для каждой черточки, чтобы создать эффект вращения */
+.loading-animation .bar:nth-child(1) {
+    animation-delay: 0s;
+}
+.loading-animation .bar:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.loading-animation .bar:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Анимация вращения */
+@keyframes spin {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0.5);
+    }
+}
+#secondPopup h1{
+    font-family: 'PT Root UI';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    color: #404040;
+}
+.input-field {
+    border: 1px solid #ccc; /* Стандартный цвет рамки */
+    padding: 8px; /* Отступ внутри инпута */
+    width: 100%; /* Ширина инпута */
+    box-sizing: border-box; /* Учитываем отступы и рамки в ширине */
+}
+
+.input-field.error {
+    border-color: red; /* Цвет рамки при ошибке */
+}
+.input-label{
+    font-family: 'PT Root UI';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    color: #404040;
+}
+
+.input-field {
+    border: 1px solid #ccc; /* Стандартный цвет рамки */
+    padding: 8px; /* Отступ внутри инпута */
+    width: 100%; /* Ширина инпута */
+    box-sizing: border-box; /* Учитываем отступы и рамки в ширине */
+    margin-bottom: 10px; /* Отступ между инпутами */
+}
+
+select.input-field {
+    -webkit-appearance: none; /* Убираем стандартный стиль для Safari */
+    -moz-appearance: none; /* Убираем стандартный стиль для Firefox */
+    appearance: none; /* Убираем стандартный стиль для остальных браузеров */
+}
+#projectSelect {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E5E5EA;
+    border-radius: 8px;
+    appearance: none; /* Убираем стандартный вид стрелки */
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcgMEw3IDEuNzExTDIuMzUgNkgxMy42TDEwLjUgMUM4LjUgMU0yLjEgMkg4LjUyTDUuNDYgNEgxMy41TDEwLjQ5IDEiIHN0cm9rZT0iIzU2NTY1NiIgLz48L3N2Zz4='); /* Добавляем кастомную стрелку */
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    background-size: 12px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+
+ /* Контейнер для кастомного селекта */
+.custom-select-wrapper {
+    position: relative;
+    width: 332px;
+  }
+  
+  .custom-select {
+    width: 100%;
+    height: 32px;
+    padding: 0 12px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #E5E5EA;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .custom-select::after {
+    content: "▼"; /* Иконка стрелки вниз */
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    color: #333;
+  }
+  
+  /* Стили для опций */
+  option {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #E5E5EA;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  option {
+    padding: 8px 12px;
+    width: 332px;
+    height: 32px;
+    font-size: 16px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Скрытие элементов при клике вне селекта */
+  .hidden {
+    display: none;
+  }
+  /* Контейнер для кастомного выпадающего списка */
+.folder-select-wrapper {
+    position: relative;
+    width: 332px;
+  }
+  
+  .folder-select {
+    width: 100%;
+    height: 32px;
+    padding: 0 12px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #E5E5EA;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .folder-select::after {
+    content: "▼"; /* Иконка стрелки вниз */
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    color: #333;
+  }
+  
+  /* Стили для выпадающего списка опций */
+  .folder-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #E5E5EA;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 8px 0;
+  }
+  
+  .folder-option {
+    padding: 8px 12px;
+    font-size: 16px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .folder-option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .folder-option .icon-img {
+    width: 16px; /* Задайте нужный размер изображения */
+    height: 16px;
+    margin-right: 8px;
+  }
+  
+  .create-new {
+    color: #007bff;
+    font-weight: bold;
+  }
+  .new-folder-section {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+  }
+  
+  .input-new-folder {
+    flex-grow: 1;
+    padding: 4px;
+    font-size: 14px;
+    margin-right: 8px;
+    border: 1px solid #E5E5EA;
+    border-radius: 4px;
+  }
+  
+  .create-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .create-button:hover {
+    background-color: #0056b3;
+  }
+  

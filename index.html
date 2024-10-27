@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pt-root-ui">
+</head>
+<body>
+    <section>
+        <div class="SEO">
+            <div class="Nazad">
+                <h2>SEO</h2>
+                <button>
+                    <img src="./img/arrow_back.svg" alt="">
+                </button>
+            </div>
+            <div class="bokovoe-menyu">
+                <div class="analitika">
+                    <img src="./img/Icon (5).svg" alt="">
+                    <span>Аналитика проекта</span>
+                </div>
+                <div class="option">
+                    <img src="./img/Icon (6).svg" alt="" id="GaykaImg">
+                    <span class="toggle-button" onclick="toggleText()">Позиции из Я.Вебмастера</span>
+                    <img src="./img/Icon (1).png" alt="" class="arrow" onclick="toggleText()">
+                    <img src="./img/Icon.png" alt="" class="arrow" onclick="toggleText()">
+                </div>
+                <div id="content" class="toggle-content">
+                    <p>Запросы Я.Вебмастер</p>
+                    <p>URLs Я.Вебмастер</p>
+                </div>
+                <div class="Syom_Position">
+                    <img src="./img/Icon (2).svg" alt="">
+                    <span>Съем позиций (Live/XML)</span>
+                </div>
+            </div>
+            <div class="project">
+                <img src="./img/Icon (4).svg" alt="">
+                <span>Мои проекты</span>
+            </div>
+        </div>
+        <div class="verhniy_menu">
+            <div class="stroka_menyu">
+                <!-- Кнопка для переключения проектов -->
+                <button class="Project_btn" onclick="toggleProjects()">
+                    <span>Проект 1</span>
+                    <img id="arrowIcon" src="./img/Icon (1).png" alt="" class="arrow"> <!-- Изменяем только эту стрелку -->
+                </button>
+            
+                <!-- Контейнер для проектов -->
+                <div id="projectList" class="project-container" style="display: none;">
+                    <!-- Здесь будут появляться наши проекты -->
+                </div>
+            
+                <div class="updated">
+                    <button>
+                        <img src="./img/Button.png" alt="">
+                    </button>
+                    <span>Обновлено 18.10.2024 в 10:11</span>
+                </div>
+            
+                <button class="create_project" onclick="togglePopup()">
+                    <img src="./img/add_2.png" alt="">
+                    <span>Новый проект</span>
+                </button>
+            </div>            
+            </div>
+    </section>
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup_content">
+            <span class="close" onclick="togglePopup()">&times;</span> <!-- Крестик для закрытия -->
+            <h2>Создание нового проекта</h2>
+            <span class="connect">Подключите проект через Я.Вебмастер</span>
+            <div class="Ubedites">
+                <button>
+                    <img src="./img/Icon (2).png" alt="">
+                </button>
+                <p>Убедитесь, что вы авторизованы в <a href="https://passport.yandex.ru/auth/plain?retpath=https%3A%2F%2Foauth.yandex.ru%2Fclient%2Fnew&noreturn=1&origin=oauth" class="AccauntInYandex" target="_blank" style=" color: #0076f5;">аккаунте Яндекс</a> и у вас создано приложение. Подробная <a href="#" style="color: #0076f5;"></a>видео-инструкция</a> по созданию приложения.</p>
+            </div>
+            
+            <div class="switch-container">
+                <span class="toggle-label">Автоматически</span> <!-- Текст рядом с ползунком -->
+                <label class="switch">
+                    <input type="checkbox" id="toggle" onchange="toggleInputs()">
+                    <span class="slider"></span>
+                </label>
+            </div>
+    
+            <div class="input-container" id="inputContainer">
+                <div class="input-item" id="clientIdInput" style="display: none;">
+                    <span class="input-label">Client ID</span>
+                    <img src="./img/Icon (3).png" alt="Описание изображения" class="input-icon">
+                    <input type="text" class="input-field" placeholder="Введите Client ID">
+                </div>
+    
+                <div class="input-item" id="accessTokenInput">
+                    <span class="input-label">Access token</span>
+                    <input type="text" class="input-field" placeholder="Введите данные из Я.Вебмастера">
+                </div>
+                
+                <div class="input-item" id="userIdInput">
+                    <span class="input-label">User ID</span>
+                    <input type="text" class="input-field" placeholder="Введите данные из Я.Вебмастера">
+                </div>
+    
+                <div class="input-item" id="hostIdInput">
+                    <span class="input-label">Host ID</span>
+                    <input type="text" class="input-field" placeholder="Введите данные из Я.Вебмастера">
+                </div>
+            </div>
+        <!-- Контейнер с кнопками -->
+        <div class="conectionBtn" id="buttonContainer">
+            <button onclick="startLoading()">Подключить</button>
+            <button onclick="togglePopup()">Отменить</button>
+        </div>
+
+        <!-- Контейнер для анимации загрузки -->
+        <div id="loadingAnimation" class="loading-animation" style="display: none;">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        </div>
+    </div>
+    <div id="secondPopup" class="popup" style="display: none;">
+        <div class="popup_content">
+            <span class="close" onclick="togglePopup()">&times;</span> <!-- Крестик для закрытия -->
+            <h1>Создание нового проекта</h1>
+                <label for="projectSelect">Проект для подключения</label>
+                <select id="projectSelect">
+                  <option disabled selected>Выберите проект из списка</option>
+                  <option>Проект 1</option>
+                  <option>Проект 2</option>
+                  <option>Проект 3</option>
+                  <option>Проект 4</option>
+                  <option>Проект 5</option>
+                </select>
+            
+            <div class="input-item" id="userIdInput">
+                <span class="input-label">Название</span>
+                <input type="text" class="input-field" placeholder="Введите название проекта">
+                <span class="error-message" style="display: none; color: red;">Необходимо подключить проект</span>
+            </div>
+    
+            <div id="folderSelectWrapper" class="folder-select-wrapper">
+                <div id="folderSelect" class="folder-select">
+                    Выберите или создайте папку для проекта
+                </div>
+                <div id="folderOptions" class="folder-options" style="display: none;">
+                    <div class="folder-option">
+                        <img src="./img/Icon (4).png" alt="" class="icon-img"> Папка 1
+                    </div>
+                    <div class="folder-option">
+                        <img src="./img/Icon (4).png" alt="" class="icon-img"> Папка 2
+                    </div>
+                    <div class="folder-option">
+                        <img src="./img/Icon (4).png" alt="" class="icon-img"> Папка 3
+                    </div>
+                    <div class="folder-option">
+                        <img src="./img/Icon (4).png" alt="" class="icon-img"> Папка 4
+                    </div>
+                    <div class="folder-option">
+                        <img src="./img/Icon (4).png" alt="" class="icon-img"> Папка 5
+                    </div>
+                    <div class="folder-option create-new">
+                        <img src="./img/Icon (4).png" alt="" class="icon-img"> Новая папка
+                    </div>
+                </div>
+            </div>
+            
+    
+            <div class="conectionBtn">
+                <button onclick="submitSecondPopup()">Сохранить</button>
+                <button onclick="cancel()">Отменить</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+            <script>
+                function toggleSwitch() {
+                    const toggle = document.getElementById('toggle');
+                    console.log('Ползунок сейчас: ', toggle.checked ? 'Включен' : 'Отключен');
+                }
+            </script>
+    <script src="./script.js"></script>
+</body>
+</html>
